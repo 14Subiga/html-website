@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <center>
+            <h1>THE BOOK HOUSE</h1>
+            <h4>Order the book you wish</h4>
+        </center>
+        <style>
+            body{
+                background-image: url("https://img.freepik.com/free-photo/book-composition-with-open-book_23-2147690555.jpg");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                font-family:'Josefin Sans',sans-serif;
+            }
+            div{
+                border:10px;
+                border-radius: 10px;
+                width: 1000px;
+                background-color:pink;
+                padding-top: 100px;
+                padding-right:20px;
+                padding-left: 100px;
+                padding-bottom: 20px;
+
+
+            }
+            label{
+                display:inline-block;
+                width:700px;
+                font-size:15pt;
+            }
+        </style>
+        <script>
+           <!--
+            function focusevent()
+            {
+                document.getElementById("input1").style.background=" green";
+            }
+            function keydownevent()
+            {
+                document.getElementById("input1");
+                alert("you pressed a key");
+            }
+            function clickevent(){
+            {
+                document.getElementById("input2");
+                alert("you have a discount");
+            }
+            }
+            function clickevent1()
+            {
+                {
+                document.getElementById("input8")
+                alert("Proceed your first order");
+                }
+            }
+            //--> 
+        </script>
+    </head>
+    <body>
+        <div>
+            <center>Details form</center><br><br>
+            <form>
+                <label><b>Have you already bought our product? </b></label>
+                <input type="button" id="input2" onclick="clickevent()" value="Yes"/>
+                <input type="button" id="input8" onclick="clickevent1()" value="No"/>
+                <br><br>
+                <label><b>Enter your name here: </b></label>
+                <input type="text" id="input5" /><br><br>
+                <label><b>Enter book name:</b></label>
+                <input type="text" id="input1" onfocus="focusevent()"/><br><br>
+                <label><b>pay type:</b></label>
+                <input type="text" id="input1" onkeydown="keydownevent()"/>
+                <br><br>
+                <input type="button" id="btn" value="submit" onclick="confirm('Are u sure to submit')"/>
+            </form>
+            <script>
+            var color =[, "#C0C0C0", "#008080",
+            "#000080", "#800080","808000"];
+            document.querySelector("div").addEventListener(
+                  "mouseover",function() {
+                document.querySelector("div").style.background
+                =color[(Math.floor(Math.random() *color.length))];
+            })
+            </script>
+        </div>
+    </body>
+</html>

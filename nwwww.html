@@ -1,0 +1,151 @@
+<!doctype html>
+<head>
+<style>
+
+.bg-img{
+background-color: skyblue;
+min-height: 600px;
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
+span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+span.psw {
+            display: block;
+            float: none;
+margin-left:20%;
+        }
+.btn{
+background-color: teal;
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.btnn{
+background-color: teal;
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.input-group {
+      margin-bottom: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"], input[type="password"],input[type="username"] {
+      padding: 10px;
+      width: 100%
+    }
+    .error-message {
+      color: red;
+    }
+    input {
+  top: 10%;
+  left:10%;
+}
+   body {
+         margin: 0;
+  }
+        input[type=submit] {
+  background-color:white;
+  color:black;
+}
+.container{
+            margin: 0;
+         position: absolute;
+         color:black;
+         top: 45%;
+         left: 50%;
+         transform: translate(-35%, -50%);
+         
+        }
+
+</style>
+
+</head>
+<body>
+
+<div class="bg-img">
+<center>
+
+
+<h1><br><br>Login Page<br><br></h1>
+<div class="container">
+ <form id="login-form">
+ <div class="input-group">
+
+<label for="username"><b>Username:</b></label>
+<input type="text"id="username" name="username" placeholder="Enter Username">
+<span class="error-message" id="username-error"></span>          
+</div>
+<div class="input-group">
+<label for="password">Password:</label>
+<input type="text"id="password"name="password" placeholder="Enter Password">
+<span class="error-message" id="password-error"></span>
+</div>
+         
+<span class="psw"><a href="#"Forgot password? style="text-decoration:none;color:white;">&#160&#160&#160&#160&#160Forgot password? </a></span>
+<button type="submit" id="submit-btn" class="btn">Login</button>
+<button type="submit" class="btnn" ><a href="signup.html" style="text-decoration:none;">Sign Up</a></button>
+        </div>
+</form>
+</center>
+</div>
+
+<script>
+ const form = document.getElementById('login-form');
+const submitBtn = document.getElementById('submit-btn');
+    const usernameField = document.getElementById('username');
+    const passwordField = document.getElementById('password');
+ const usernameError = document.getElementById('username-error');
+    const passwordError = document.getElementById('password-error');
+function validateForm() {
+      let isValid = true;
+      if (!usernameField.value.trim()) {
+        usernameError.textContent = 'Username cannot be empty';
+        isValid = false;
+      } else {
+        usernameError.textContent = '';
+      }
+ if (!passwordField.value.trim()) {
+        passwordError.textContent = 'Password cannot be empty';
+        isValid = false;
+      } else {
+        passwordError.textContent = '';
+      }
+      return isValid;
+    }
+function redirectToPage() {
+      // Replace 'page.html' with the URL of the page you want to redirect to
+      window.location.href = 'webs.html';
+    }
+
+    submitBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (validateForm()) {
+        redirectToPage();
+      }
+    });
+ </script>
+
+</body>
+</html>
